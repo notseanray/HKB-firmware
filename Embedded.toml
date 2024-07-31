@@ -1,0 +1,21 @@
+# Embed.toml
+# For an explanation of the configuration and more config values, visit https://github.com/probe-rs/cargo-embed/blob/master/src/config/default.toml
+
+[default.general]
+chip = "STM32F446RETx"               # chip = "name"
+connect_under_reset = false          # Use this flag to assert the nreset & ntrst pins during attaching the probe to the chip.
+
+[default.probe]
+protocol = "Swd"                     # The protocol to be used for communicating with the target.
+
+[default.flashing]
+enabled = true                       # Flash the target
+restore_unwritten_bytes = false      # Whether or not bytes erased but not rewritten with data from the ELF
+do_chip_erase = false                # Triggers a full chip erase instead of a page by page erase.
+
+[default.reset]
+enabled = true                       # the target will be reset after flashing.
+halt_afterwards = false              # Whether or not the target should be halted after reset.
+
+[default.rtt]
+enabled = true                       # Whether or not an RTTUI should be opened after flashing.
