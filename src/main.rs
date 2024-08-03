@@ -44,8 +44,8 @@ fn main() -> ! {
         .require_pll48clk()
         .sysclk(MONO_HZ.Hz())
         .hclk(MONO_HZ.Hz())
-        .pclk1(42.MHz())
-        .pclk2(84.MHz())
+        .pclk1(36.MHz())
+        .pclk2(72.MHz())
         .freeze();
     let dp = pac::Peripherals::take().unwrap();
     let gpioa = dp.GPIOA.split();
